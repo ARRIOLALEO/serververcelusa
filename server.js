@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 
 // mongoose.connect("mongodb://localhost:27017/products")
 
-mongoose.connect("mongodb+srv://marioarriola:BtZ4ZTL7MyeLacL6@Cluster0.n9z04.mongodb.net/sample_mflix?retryWrites=true&w=majority"")
+mongoose.connect("mongodb+srv://marioarriola:BtZ4ZTL7MyeLacL6@cluster0.jcdzo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
 const db = mongoose.connection
 db.on('error',(err)=> console.log(err.message))
