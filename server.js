@@ -1,0 +1,16 @@
+const express = require('express')
+const mongoose = require('mongoose')
+
+mongoose.connect("mongodb://localhost:27017/products")
+
+const db = mongoose.connection
+db.on('error',(err)=> console.log(err.message))
+db.once('open',()=> console.log("im connected to mongo db"))
+const app = express()
+// routes 
+app.use(express.json())
+const productsRouts  = require('./routes/productsRoutes')
+app.use("/products",productsRouts)
+
+
+app.listen(3000,()=>console.log("im running on my port 3000"))

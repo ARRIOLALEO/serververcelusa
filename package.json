@@ -1,0 +1,16 @@
+{
+  "name": "apiproducts",
+  "version": "1.0.0",
+  "description": "this is our first API",
+  "main": "index.js",
+  "scripts": {
+    "start":"node server.js"
+  },
+  "author": "Mario Arriola",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.2.11",
+    "nodemon": "^2.0.15"
+  }
+}
