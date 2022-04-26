@@ -4,7 +4,7 @@ const product = require('../models/productSchema')
 var cors = require('cors')
 const helmet = require("helmet");
 app.use(helmet({
-    referrerPolicy: { policy: "no-referrer" },
+    contentSecurityPolicy: false,
   }));
 // get all products
 router.get("/",cors(),async (req,response,next)=>{
