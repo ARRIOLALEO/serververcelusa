@@ -1,9 +1,10 @@
 const express = require('express')
 const router = express.Router()
 const product = require('../models/productSchema')
+var cors = require('cors')
 // get all products
-router.get("/",async (req,response,next)=>{
-    
+router.get("/",cors(),async (req,response,next)=>{
+
     try{
         const allPRoducts = await product.find()
         return response.status(200).json({products:allPRoducts})
