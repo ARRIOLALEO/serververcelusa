@@ -3,6 +3,7 @@ const router = express.Router()
 const product = require('../models/productSchema')
 // get all products
 router.get("/",async (req,response,next)=>{
+    
     try{
         const allPRoducts = await product.find()
         return response.status(200).json({products:allPRoducts})
