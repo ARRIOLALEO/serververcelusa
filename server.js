@@ -10,8 +10,9 @@ db.on('error',(err)=> console.log(err.message))
 db.once('open',()=> console.log("im connected to mongo db"))
 const app = express()
 // routes 
-app.use(express.json())
 app.use(cors())
+app.use(express.json())
+
 const productsRouts  = require('./routes/productsRoutes')
 app.use("/products",productsRouts)
 
