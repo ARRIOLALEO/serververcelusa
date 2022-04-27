@@ -2,12 +2,10 @@ const express = require('express')
 const router = express.Router()
 const product = require('../models/productSchema')
 var cors = require('cors')
-const helmet = require("helmet");
-app.use(helmet({
-    contentSecurityPolicy: false,
-  }));
+
+
 // get all products
-router.get("/",cors(),async (req,response,next)=>{
+router.get("/",async (req,response,next)=>{
 
     try{
         const allPRoducts = await product.find()
