@@ -1,6 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
-var cors = require('cors')
+
 
 // mongoose.connect("mongodb://localhost:27017/products")
 
@@ -10,7 +10,7 @@ db.on('error',(err)=> console.log(err.message))
 db.once('open',()=> console.log("im connected to mongo db"))
 const app = express()
 // routes 
-app.use(cors())
+
 app.use(express.json())
 
 const productsRouts  = require('./routes/productsRoutes')

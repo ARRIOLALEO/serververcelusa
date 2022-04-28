@@ -1,7 +1,6 @@
 const express = require('express')
 const router = express.Router()
 const product = require('../models/productSchema')
-var cors = require('cors')
 
 
 // get all products
