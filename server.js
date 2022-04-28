@@ -11,6 +11,11 @@ db.once('open',()=> console.log("im connected to mongo db"))
 const app = express()
 // routes 
 app.use(cors())
+app.use(
+    helmet({
+      referrerPolicy: { policy: "no-referrer" },
+    })
+  );
 app.use(express.json())
 
 const productsRouts  = require('./routes/productsRoutes')
